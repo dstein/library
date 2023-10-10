@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <header>
+        <div class="ctr">
+            <div class="title-wrapper">
+                <h1 class="library-title">
+                    Library
+                </h1>
+            </div>
+            <nav>
+                <button id="new-book">
+                    New Book
+                </button>
+                <button id="clear-library-start" class="alt-btn">
+                    Clear Library
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section id="empty-notice" class="library-empty">
+        <div class="ctr">
+            <p>Your library looks a little empty... let's add some books!</p>
+        </div>
+    </section>
+
+    <section class="library-wrapper">
+        <div class="ctr">
+            <div class="library-row">
+
+            </div>
+        </div>
+    </section>
+
+    <dialog id="book-dialog">
+        <div class="dialog-content">
+            <span class="dialog-title hdr-font">
+                Submit a New Book
+            </span>
+            <p>Use the form below to submit a new book.</p>
+        </div>
+        <form id="book-form">
+            <div class="input-group">
+                <label for="book-title">Title</label>
+                <input type="text" name="title" id="book-title" required>
+            </div>
+            <div class="input-group">
+                <label for="book-author">Author</label>
+                <input type="text" name="author" id="book-author" required>
+            </div>
+            <div class="input-group">
+                <label for="book-page-count">Page Count</label>
+                <input type="number" min="0" name="page-count" id="book-page-count">
+            </div>
+            <div class="input-group">
+                <label for="book-read">Have you read this book?</label>
+                <input type="checkbox" name="read" id="book-read">
+            </div>
+            <button id="submit-book" formmethod="dialog">Submit</button>
+        </form>
+        <button id="cancel-book" class="dialog-cancel generic-cancel cancel abs-pos">X</button>
+    </dialog>
+
+    <dialog id="clear-notice">
+        <div class="dialog-content">
+            <span class="dialog-title hdr-font">
+                Are you sure?
+            </span>
+            <p>This action will completely clear your library.</p>
+        </div>
+        <button id="clear-library-final" class="alert-btn generic-cancel">
+            Clear Library
+        </button>
+        <button class="dialog-cancel generic-cancel cancel abs-pos">X</button>
+    </dialog>
+</body>
+</html>
