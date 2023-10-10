@@ -1,5 +1,5 @@
 // TODO
-// -
+// - Change our constructor functions to classes
 
 const libraryEl             = document.getElementsByClassName('library-wrapper');
 const libraryRow            = document.getElementsByClassName('library-row');
